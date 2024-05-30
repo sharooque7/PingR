@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.metrics.metric.configuration.DBConnection;
 import com.metrics.metric.entities.customer.Customer;
-import com.metrics.metric.services.CustomerService;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;

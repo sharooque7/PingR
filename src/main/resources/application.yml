@@ -13,9 +13,9 @@ spring:
     hibernate:
       ddl: none
   datasource:
-    url: jdbc:postgresql://localhost:5432/ainszon
+    url: jdbc:postgresql://localhost:5432/PingR
     username: admin
-    password: admin123
+    password: admin
     driver-class-name: org.postgresql.Driver
   flyway:
     enabled: true
