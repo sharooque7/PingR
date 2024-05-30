@@ -1,0 +1,33 @@
+#spring:
+##  data:
+##    mongodb:
+###      uri: mongodb://user:pass@10.20.32.60:27017/platformDB?authSource=admin
+##      uri: mongodb://localhost:27017/platformDB?authSource=admin
+##      auto-index-creation: true
+#  application:
+#    name:
+#      metric
+# For Spring Connect Profile
+spring:
+  jpa:
+    hibernate:
+      ddl: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ainszon
+    username: admin
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+
+  profiles:
+    active: "spring-connect"
+  data:
+    mongodb:
+      uri: "mongodb://user:pass@localhost:27017/platformDB?authSource=admin"
+
+# For Petrus Connect Profile
+#spring.profiles.active=petrus-connect
+#spring.data.mongodb.uri=petrus_connect_mongo_uri
+
+
