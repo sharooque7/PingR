@@ -14,7 +14,7 @@ public class JdbcUserRepository implements UserRepository{
     }
     @Override
     public void insert(User user) {
-        String sql = "INSERT INTO users ( username, email, password_hash, full_name, bio, profile_picture_url, created_at) " +
+        String sql = "INSERT INTO users (user_id, username, email, password_hash, full_name, bio, profile_picture_url) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         jdbcTemplate.update(sql,(PreparedStatement ps)->{
@@ -24,7 +24,6 @@ public class JdbcUserRepository implements UserRepository{
             ps.setString(4, user.getFullName());
             ps.setString(5, user.getBio());
             ps.setString(6, user.getProfilePictureUrl());
-            ps.setObject(7, user.getCreatedAt());
         });
     }
 }

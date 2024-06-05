@@ -17,7 +17,6 @@ public class UserRowMapper implements RowMapper<User> {
         user.setFullName(rs.getString("full_name"));
         user.setBio(rs.getString("bio"));
         user.setProfilePictureUrl(rs.getString("profile_picture_url"));
-        user.setCreatedAt(rs.getTimestamp("created_at").toLocalDateTime());
         return user;
     }
 }

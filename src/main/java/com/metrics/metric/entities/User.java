@@ -1,6 +1,7 @@
 package com.metrics.metric.entities;
 
 import lombok.*;
+import org.springframework.data.annotation.Transient;
 
 import java.time.LocalDateTime;
 
@@ -10,15 +11,14 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User extends Base{
 
     private Long userId;
     private String username;
     private String email;
+    @Transient
     private String passwordHash;
     private String fullName;
     private String bio;
     private String profilePictureUrl;
-    private LocalDateTime createdAt;
-
 }
