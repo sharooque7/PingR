@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Transient;
 
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode(callSuper = true)
 @Builder
 @Getter
 @Setter
@@ -17,7 +18,7 @@ public class User extends Base{
     private String username;
     private String email;
     @Transient
-    private String passwordHash;
+    private String password;
     private String fullName;
     private String bio;
     private String profilePictureUrl;

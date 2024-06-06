@@ -4,5 +4,6 @@ import com.metrics.metric.entities.User;
 
 public interface UserRepository {
 
-    void insert(User user);
+    User insert(User user);
+    User findByUserName(String username);
 }
